@@ -227,3 +227,106 @@ font-size:18px;
 }
 
 }
+/* ---------- CAKE ---------- */
+
+.cakeText{
+font-size:22px;
+margin:20px;
+color:#8b2d5c;
+}
+
+.cake{
+position:relative;
+margin:40px auto;
+width:220px;
+height:220px;
+}
+
+.layer{
+position:absolute;
+left:50%;
+transform:translateX(-50%);
+border-radius:15px;
+box-shadow:0 10px 25px rgba(0,0,0,.15);
+}
+
+.layer1{
+bottom:0;
+width:220px;
+height:70px;
+background:#ff6fa8;
+}
+
+.layer2{
+bottom:65px;
+width:180px;
+height:60px;
+background:#ff8fb9;
+}
+
+.layer3{
+bottom:120px;
+width:140px;
+height:50px;
+background:#ffb3d1;
+}
+
+.candles{
+position:absolute;
+bottom:165px;
+left:50%;
+transform:translateX(-50%);
+display:flex;
+gap:22px;
+}
+
+.candle{
+width:10px;
+height:45px;
+background:white;
+border-radius:5px;
+position:relative;
+}
+
+.flame{
+position:absolute;
+top:-18px;
+left:50%;
+transform:translateX(-50%);
+width:14px;
+height:18px;
+background:gold;
+border-radius:50% 50% 50% 50%;
+box-shadow:0 0 20px orange;
+animation:flicker .3s infinite alternate;
+}
+
+@keyframes flicker{
+
+from{
+transform:translateX(-50%) scale(1);
+}
+
+to{
+transform:translateX(-50%) scale(.8);
+}
+
+}
+
+#blowBtn{
+margin-top:20px;
+background:#ff4f8f;
+color:white;
+}
+
+#wishMessage{
+font-size:22px;
+margin-top:30px;
+color:#d81b60;
+}
+
+#nextBouquet{
+margin-top:20px;
+background:#9c27b0;
+color:white;
+}
