@@ -69,3 +69,38 @@ page3.classList.add("active");
 }
 
 };
+// ---------- CAKE ----------
+
+const blowBtn = document.getElementById("blowBtn");
+const wishMessage = document.getElementById("wishMessage");
+const nextBouquet = document.getElementById("nextBouquet");
+
+blowBtn.onclick = () => {
+
+    const flames = document.querySelectorAll(".flame");
+
+    flames.forEach((flame, index) => {
+
+        setTimeout(() => {
+            flame.style.transition = ".5s";
+            flame.style.opacity = "0";
+            flame.style.transform = "translateX(-50%) scale(0)";
+        }, index * 400);
+
+    });
+
+    setTimeout(() => {
+
+        wishMessage.style.display = "block";
+        nextBouquet.style.display = "inline-block";
+        blowBtn.style.display = "none";
+
+    }, 1600);
+
+};
+
+nextBouquet.onclick = () => {
+
+    alert("🌹 Bouquet Scene Coming Next ❤️");
+
+};
