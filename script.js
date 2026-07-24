@@ -70,12 +70,8 @@ page3.classList.add("active");
 }
 
 };
-// ---------- CAKE ----------
-
 const blowBtn = document.getElementById("blowBtn");
-
 const wishMessage = document.getElementById("wishMessage");
-
 const nextBouquet = document.getElementById("nextBouquet");
 
 blowBtn.onclick = () => {
@@ -89,12 +85,13 @@ blowBtn.onclick = () => {
             flame.style.opacity = "0";
             flame.style.transform = "translateX(-50%) scale(0)";
         }, index * 400);
+
     });
 
     setTimeout(() => {
-    wishMessage.style.display = "block";
-    nextBouquet.style.display = "inline-block";
-    blowBtn.style.display = "none";
-}, 1600);
+        wishMessage.style.display = "block";
+        nextBouquet.style.display = "inline-block";
+        blowBtn.style.display = "none";
+    }, 1600);
 
 };
