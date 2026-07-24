@@ -1,29 +1,22 @@
 const page1 = document.getElementById("page1");
 const page2 = document.getElementById("page2");
 const page3 = document.getElementById("page3");
-
 const yes = document.getElementById("yes");
 const no = document.getElementById("no");
-
 const balloons = document.querySelectorAll(".balloon");
-
 const card = document.getElementById("messageCard");
 const cardText = document.getElementById("cardText");
 const continueBtn = document.getElementById("continueBtn");
-
 let popped = 0;
-
 yes.onclick = () => {
-
 page1.classList.remove("active");
 page2.classList.add("active");
 
 };
 
-function moveNo(){
-
+function moveNo()
+{
 const x = Math.random()*(window.innerWidth-150);
-
 const y = Math.random()*(window.innerHeight-100);
 
 no.style.left = x+"px";
@@ -86,21 +79,16 @@ blowBtn.onclick = () => {
             flame.style.opacity = "0";
             flame.style.transform = "translateX(-50%) scale(0)";
         }, index * 400);
-
     });
 
     setTimeout(() => {
-
         wishMessage.style.display = "block";
         nextBouquet.style.display = "inline-block";
         blowBtn.style.display = "none";
 
     }, 1600);
-
 };
-
 nextBouquet.onclick = () => {
-
     alert("🌹 Bouquet Scene Coming Next ❤️");
 
 };
