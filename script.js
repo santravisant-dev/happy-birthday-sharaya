@@ -1,51 +1,71 @@
-const yesBtn = document.getElementById("yesBtn");
-const noBtn = document.getElementById("noBtn");
+const page1 = document.getElementById("page1");
+const page2 = document.getElementById("page2");
+const page3 = document.getElementById("page3");
 
-const welcome = document.getElementById("welcome");
-const balloonScreen = document.getElementById("balloonScreen");
+const yes = document.getElementById("yes");
+const no = document.getElementById("no");
+
+const balloons = document.querySelectorAll(".balloon");
+
+const card = document.getElementById("messageCard");
+const cardText = document.getElementById("cardText");
+const continueBtn = document.getElementById("continueBtn");
 
 let popped = 0;
 
-yesBtn.onclick = () => {
-    welcome.classList.add("hidden");
-    balloonScreen.classList.remove("hidden");
+yes.onclick = () => {
+
+page1.classList.remove("active");
+page2.classList.add("active");
+
 };
 
-noBtn.addEventListener("mouseover", moveButton);
-noBtn.addEventListener("click", moveButton);
+function moveNo(){
 
-function moveButton(){
-    const x = Math.random() * (window.innerWidth - 150);
-    const y = Math.random() * (window.innerHeight - 80);
+const x = Math.random()*(window.innerWidth-150);
 
-    noBtn.style.left = x + "px";
-    noBtn.style.top = y + "px";
+const y = Math.random()*(window.innerHeight-100);
+
+no.style.left = x+"px";
+no.style.top = y+"px";
+
 }
 
-const messages = [
-    "You are so special ❤️",
-    "You make the world brighter ✨",
-    "Never stop smiling 😊",
-    "You are loved more than you know 💖"
-];
+no.addEventListener("mouseover",moveNo);
+no.addEventListener("click",moveNo);
 
-document.querySelectorAll(".balloon").forEach((balloon, index)=>{
+balloons.forEach(balloon=>{
 
-    balloon.onclick = ()=>{
+balloon.onclick=()=>{
 
-        alert(messages[index]);
+if(balloon.classList.contains("done")) return;
 
-        balloon.style.transform="scale(0)";
-        balloon.style.opacity="0";
+balloon.classList.add("done");
 
-        popped++;
+balloon.style.transition=".5s";
+balloon.style.transform="scale(0)";
+balloon.style.opacity="0";
 
-        if(popped===4){
-            setTimeout(()=>{
-                alert("🎂 Amazing! Next we'll bring the birthday cake!");
-            },500);
-        }
+card.style.display="block";
 
-    }
+cardText.innerHTML = balloon.dataset.message;
+
+popped++;
+
+};
 
 });
+
+continueBtn.onclick=()=>{
+
+card.style.display="none";
+
+if(popped===4){
+
+page2.classList.remove("active");
+
+page3.classList.add("active");
+
+}
+
+};
