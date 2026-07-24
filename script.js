@@ -92,13 +92,9 @@ blowBtn.onclick = () => {
     });
 
     setTimeout(() => {
-        wishMessage.style.display = "block";
-        nextBouquet.style.display = "inline-block";
-        blowBtn.style.display = "none";
-
-    }, 1600);
-};
-nextBouquet.onclick = () => {
-    alert("🌹 Bouquet Scene Coming Next ❤️");
+    wishMessage.style.display = "block";
+    nextBouquet.style.display = "inline-block";
+    blowBtn.style.display = "none";
+}, 1600);
 
 };
