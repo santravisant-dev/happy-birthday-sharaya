@@ -1,35 +1,93 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Happy Birthday Sharaya ❤️</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Happy Birthday Sharaya ❤️</title>
 
-    <link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="style.css">
 </head>
+
 <body>
 
-<div id="welcome" class="screen">
-    <h1>🎉 Happy Birthday Sharaya 🎉</h1>
-    <p>Today is all about you ❤️</p>
+<div id="page1" class="page active">
 
-    <h2>Are you excited for what's next?</h2>
+<h1 class="title">
+🎉 Happy Birthday Sharaya 🎉
+</h1>
 
-    <div class="buttons">
-        <button id="yesBtn">YES 💖</button>
-        <button id="noBtn">NO 🙈</button>
-    </div>
+<p class="subtitle">
+Someone made something special just for you...
+</p>
+
+<h2>
+Are you excited for what's next?
+</h2>
+
+<div class="buttons">
+
+<button id="yes">
+YES ❤️
+</button>
+
+<button id="no">
+NO 🙈
+</button>
+
 </div>
 
-<div id="balloonScreen" class="screen hidden">
-    <h1>🎈 Pop all 4 balloons!</h1>
+</div>
 
-    <div id="balloons">
-        <div class="balloon red">🎈</div>
-        <div class="balloon blue">🎈</div>
-        <div class="balloon green">🎈</div>
-        <div class="balloon yellow">🎈</div>
-    </div>
+<div id="page2" class="page">
+
+<h1>
+🎈 Pop Every Balloon
+</h1>
+
+<p>
+Every balloon hides something for you ❤️
+</p>
+
+<div class="balloon-area">
+
+<div class="balloon red" data-message="You are so special ❤️"></div>
+
+<div class="balloon blue" data-message="Your smile is someone's favourite sunshine ☀️"></div>
+
+<div class="balloon pink" data-message="Never stop being amazing 🌸"></div>
+
+<div class="balloon purple" data-message="Today is all about YOU 🎂"></div>
+
+</div>
+
+<div id="messageCard">
+
+<h2 id="cardText"></h2>
+
+<button id="continueBtn">
+
+Continue ❤️
+
+</button>
+
+</div>
+
+</div>
+
+<div id="page3" class="page">
+
+<h1>
+
+🎂 Coming Soon...
+
+</h1>
+
+<p>
+
+Next we'll make the cake appear.
+
+</p>
+
 </div>
 
 <script src="script.js"></script>
